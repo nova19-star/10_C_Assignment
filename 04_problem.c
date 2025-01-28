@@ -1,8 +1,8 @@
-// 3. Write a C program to find maximum and minimum element of an array
+// 4. Write a C program to copy the content of one array into another array
 
-#include<stdio.h>
+#include <stdio.h>
 int main() {
-    int x[10],n,i,max,min;
+    int x[10], y[10], n, i;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
     for(i = 0; i < n; i++)
@@ -15,15 +15,14 @@ int main() {
     {
         printf("%d\t",x[i]);
     }
-    max = min = x[0];
     for (i = 0; i < n; i++)
     {
-        if(x[i]>max)
-        max = x[i];
-        if (x[i]<min)
-        min = x[i];
+        y[i] = x[i];
     }
-    printf("The maximum element: %d\t", max);
-    printf("The minimum element: %d", min);
+    printf("the another array elements are: ");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d\t",y[i]);
+    }
     return 0;
 }

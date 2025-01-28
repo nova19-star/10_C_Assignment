@@ -1,8 +1,8 @@
-// 2. Write a C program to search an element in an given array
+// 1. Write a C program to find the reverse of an array
 
 #include<stdio.h>
 int main() {
-    int x[10],n,i,element;
+    int x[10],n,i,j,temp;
     printf("Enter the elements: ");
     scanf("%d", &n);
     for(i = 0; i < n; i++)
@@ -15,19 +15,16 @@ int main() {
     {
         printf("%d\t",x[i]);
     }
-    printf("Enter the elements you want to search: ");
-    scanf("%d", &element);
-    for  (i = 0; i < n; i++)
+    for(i = 0, j = n - 1; i < j; i++, j--)
     {
-        if(x[i] == element)
-        {
-            printf("Element %d is found", x[i]);
-            break;
-        }
+        temp = x[i];
+        x[i] = x[j];
+        x[j] = temp;
     }
-    if(i == n)
+    printf("The new array are: ");
+    for(i = 0; i < n; i++)
     {
-        printf("Element not found");
+        printf("%d\t", x[i]);
     }
     return 0;
 }
