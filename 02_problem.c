@@ -3,11 +3,11 @@
 #include<stdio.h>
 int main() {
     int x[10],n,i,element;
-    printf("Enter the elements: ");
+    printf("Enter the number of elements in an array: ");
     scanf("%d", &n);
     for(i = 0; i < n; i++)
     {
-        printf("Enter the number of elements in an array: ");
+        printf("Enter the elements: ");
         scanf("%d", &x[i]);
     }
     printf("The elements are: ");
